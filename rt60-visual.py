@@ -90,9 +90,10 @@ walls_radio = RadioButtons(ax=ax_radio_walls, labels=MATERIALS, active=MATERIALS
 ceil_radio = RadioButtons(ax=ax_radio_ceil, labels=MATERIALS, active=MATERIALS.index(initial_config['ceiling']))
 
 #materials
-ax_radio_floor.set_title('Floor Material', y=1.0, pad=-14)
-ax_radio_walls.set_title('Walls Material', y=1.0, pad=-14)
-ax_radio_ceil.set_title('Ceiling Material', y=1.0, pad=-14)
+ax_radio_size.set_title('Room Size Preset', y=0.9)
+ax_radio_floor.set_title('Floor Material', y=0.9)
+ax_radio_walls.set_title('Walls Material', y=0.9)
+ax_radio_ceil.set_title('Ceiling Material', y=0.9)
 
 def update(val):
     l = l_slider.val
