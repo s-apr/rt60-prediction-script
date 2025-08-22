@@ -69,6 +69,7 @@ ax.set_title('Interactive RT60 Calculator')
 ax.set_ylim(0, 4)
 ax.grid(True, which='both')
 
+fig.text(0.75, 0.85, 'Room Parameters', ha='center', fontweight='bold')
 
 #sliders
 ax_sliders_l = plt.axes([0.65, 0.80, 0.25, 0.03])
@@ -94,6 +95,12 @@ ax_radio_size.set_title('Room Size Preset', y=0.9)
 ax_radio_floor.set_title('Floor Material', y=0.9)
 ax_radio_walls.set_title('Walls Material', y=0.9)
 ax_radio_ceil.set_title('Ceiling Material', y=0.9)
+
+#remove boxes
+ax_radio_size.spines[:].set_visible(False)
+ax_radio_floor.spines[:].set_visible(False)
+ax_radio_walls.spines[:].set_visible(False)
+ax_radio_ceil.spines[:].set_visible(False)
 
 def update(val):
     l = l_slider.val
