@@ -100,9 +100,9 @@ def update(val):
     h = h_slider.val
     
     config = {
-        'floor': floor_radio.labels[floor_radio.value_selected].get_text(),
-        'walls': walls_radio.labels[walls_radio.value_selected].get_text(),
-        'ceiling': ceil_radio.labels[ceil_radio.value_selected].get_text()
+        'floor': floor_radio.value_selected,
+        'walls': walls_radio.value_selected,
+        'ceiling': ceil_radio.value_selected
     }
     
     new_rt60 = calculate_rt60(l, w, h, config)
